@@ -36,8 +36,8 @@ public class TokenGenerationPage {
 //				        // Print the response status code and body
           if(statusCode == 200) {
         	  JsonPath jsonPath = response.jsonPath();
-        	  jsonPath.getString("token");
-        	  System.out.println("Access Token: " + token);
+        	  global.token= jsonPath.getString("accessToken");
+        	  System.out.println("Access Token: " +global.token );
           }else {
         	  System.out.println("Failed to generate token. status code: " + statusCode) ;
           }
