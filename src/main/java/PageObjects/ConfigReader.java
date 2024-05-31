@@ -19,6 +19,7 @@ private static Properties properties;
 		catch (IOException e) {
 			throw new RuntimeException("unable to load config.properties file:" + e.getMessage());
 		}
+		
 	}
 	public static String getProperty(String key) {
 		return properties.getProperty(key);
